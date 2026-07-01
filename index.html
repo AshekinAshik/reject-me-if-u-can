@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Special Message For You ❤️</title>
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="A cute, romantic interactive website made especially for you.">
+  <meta name="theme-color" content="#ffe8ec">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Ambient Floating Hearts Background -->
+  <div class="ambient-bg" id="ambient-bg" aria-hidden="true"></div>
+
+  <div class="container">
+    
+    <!-- State 1: The Initial Ask -->
+    <div id="state-1" class="card active">
+      <div class="profile-container">
+        <img src="girlfriend.jpeg" alt="My Favorite Person" class="profile-img" onerror="this.src='https://placehold.co/150x150/ffccd5/5d4452?text=%E2%9D%A4%EF%B8%8F'">
+      </div>
+      <h1 class="question-text">Do you love me?</h1>
+      <div class="btn-group">
+        <button id="yes-btn-1" class="btn btn-yes">Yes!</button>
+        <button id="no-btn-1" class="btn btn-no">No</button>
+      </div>
+    </div>
+
+    <!-- State 2: The Proposal -->
+    <div id="state-2" class="card">
+      <div class="profile-container">
+        <!-- Re-use the same image but adds a small cute decoration effect if desired -->
+        <img src="girlfriend.jpeg" alt="My Favorite Person" class="profile-img" onerror="this.src='https://placehold.co/150x150/ffccd5/5d4452?text=%E2%9D%A4%EF%B8%8F'">
+      </div>
+      <h2 class="question-text">Will you be mine for the rest of my life?</h2>
+      <div class="btn-group">
+        <button id="yes-btn-2" class="btn btn-yes">Yes, a thousand times!</button>
+        <button id="no-btn-2" class="btn btn-no">No</button>
+      </div>
+    </div>
+
+    <!-- State 3: The Finale -->
+    <div id="state-3" class="card">
+      <h2 class="thank-you-msg">Yay! I love you! ❤️</h2>
+      <p class="sub-msg">Our story continues forever...</p>
+      <div class="video-wrapper">
+        <video id="love-video" class="love-video" playsinline controls loop>
+          <source src="love_video.mp4" type="video/mp4">
+          Your browser does not support the video tag. Please ensure love_video.mp4 exists.
+        </video>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
